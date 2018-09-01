@@ -1,0 +1,18 @@
+﻿@model EpamAspMvc.Models.ImageViewModel
+
+@Scripts.Render("~/Scripts/jquery-3.3.1.js")
+@Scripts.Render("~/Scripts/jquery.unobtrusive-ajax.js")
+
+    
+
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#galery-button').click(function (e) {
+            e.preventDefault();
+            var page = 2;
+            $('#result').load('@Url.Action("About", "Home")?page='+page)
+        });
+    });
+</script>
+
